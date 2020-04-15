@@ -1,2 +1,2 @@
 # Mechanics-Project
-Project for my Undergraduate Classical Mechanics
+Project for Undergraduate Classical Mechanics - USF Spring 2020
