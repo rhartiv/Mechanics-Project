@@ -1,0 +1,29 @@
+\section{Description of Numerical/Experimental Procedures} \label{sec:Description of Numerical/Experimental Procedures}
+    \subsection{Numerical/Computational procedure}
+            \par{} The main algorithm behind the computational model comes from a Fourth Order Runge-Kutta Integrator. Consider some differential equation:
+        \begin{equation}
+            \frac{dy(t)}{dt} = f(y(t),t)
+        \end{equation}
+            One can numerically approximate the equation of the line by using ghost steps at very small steps $h$ across the function $y(t)$. The equations for these ghost steps are given as the following:
+        \begin{align} 
+            & {k_1} = f({y^*}({t_0}),{t_0})  \\  
+            & {k_2} = f\left( {{y^*}({t_0}) + {k_1}{h \over 2},{t_0} + {h \over 2}} \right)  \\
+            & {k_3} = f\left( {{y^*}({t_0}) + {k_2}{h \over 2},{t_0} + {h \over 2}} \right)  \\  
+            & {k_4} = f\left( {{y^*}({t_0}) + {k_3}h,{t_0} + h} \right)
+        \end{align}
+        Then one can take the weighted sum of the the ghost points to give that the next step along the line is the following:
+        \begin{equation}
+            {y^*}(t_0 + h) = {y^*}(t) + h\frac{k_1 + 2k_2 + 2k_3 + k_4}{6}
+        \end{equation}
+        \par{} Here, we use this form of integration technique for the computational accuracy of the algorithm and the flexibility of the integrator. All one needs is the differential equation of motion and then a computer can do the heavy lifting. We thus consider the differential equation of motion described in the theoretical model:
+        \begin{eqnarray}
+            \begin{split}
+                \ddot\theta+\frac{b}{m}\dot\theta+\frac{\kappa}{ml^{2}}\theta=0
+            \end{split}.
+        \end{eqnarray}
+    \subsection{Experimental procedure}
+    There are many factors to account for in this project which would be rather difficult to measure experimentally. In particular, measuring something like the torsion coefficient would be rather difficult, and even seemingly simple measurements such as the mass of a door prove to be rather tedious to obtain (especially considering administrative constraints). We then have done our best with what we have (and a few extra tools).\par
+    Firstly, we found a door which had a manual closer; initially, our intention was to use the doors in our Interdisciplinary Sciences building. However, the precautionary measures against the spread of COVID-19 has forced us to move a bit closer to home, in fact we chose a porch screen door which leads to the back yard of Mr. Hart.\par
+    Next, we wanted some method by which to measure the net force on the door. Luckily, this can be accomplished by means of a door pressure gauge, which is a small metal rod attached to some springs within a chamber, and when pressed against a door, tick marks on the bar can be read out as being the force exerted by the door on the gauge. Obviously, we placed our pressure gauge where one might typically press their hand against a door (much closer to the "handle" than the hinges), and made our all our measurements from the same spot on the door. We first measure the force as we open the door until we read a maximum angle (where we see the force spike), then start to recede and note any changes in the force (due to damping effects).\par
+    Finally, we needed a way to measure angular acceleration and angular velocity of the door. We first placed a large piece of paper below the door (ensuring the door was not scraping against it, to avoid an additional frictional force), with lines corresponding to certain angles: 125°(the maximum to which the door could open), 90°, 60°, 45°, 36.9°, 30°, 15°, and 7° drawn onto it. We then time the door closing on a stopwatch and lap every time it passes a line, then plot 5 sets of these measurements and fit a curve to the data.\par
+    From these we find some interesting results, in which we can compare the net force on the door to the door's motion.
