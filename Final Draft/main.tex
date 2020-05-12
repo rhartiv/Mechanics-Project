@@ -1,0 +1,79 @@
+\documentclass[a4paper, amsfonts, amssymb, amsmath, reprint, showkeys, nofootinbib, twoside]{revtex4-1}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[colorinlistoftodos, color=green!40, prependcaption]{todonotes}
+\input{preamble}
+\usepackage[pdftex, pdftitle={Article}, pdfauthor={Author}]{hyperref} % For hyperlinks in the PDF
+%\setlength{\marginparwidth}{2.5cm}
+\bibliographystyle{apsrev4-1}
+\begin{document}
+\title{When one door's closing... open another?}
+
+\author{Robert Hart}
+    \email[Correspondence email address: ]{rhart1@mail.usf.edu}% Your name
+    \affiliation{University of South Florida, Department of Physics, Tampa, FL, USA}
+    \affiliation{University of South Florida, Department of Mathematics and Statistics, Tampa, FL, USA}
+\author{Sierra LaRosa}
+    \email[Correspondence email address: ]{sierralarosa@mail.usf.edu}
+    \affiliation{University of South Florida, Department of Physics, Tampa, FL, USA}
+\author{Zihe Ye}
+    \email[Correspondence email address: ]{ziheye@mail.usf.edu }
+    \affiliation{University of South Florida, Department of Computer Science and Engineering, Tampa, FL, USA}
+    \affiliation{University of South Florida, Department of Physics, Tampa, FL, USA}
+    \affiliation{University of South Florida, Department of Mathematics and Statistics, Tampa, FL, USA}
+
+
+
+
+
+
+
+\date{\today} % Leave empty to omit a date
+
+\begin{abstract}
+Here we consider a problem which occurs in everyday life, relating to the challenges of our current situation in that here in Spring 2020, we would like to remain distant from one another to keep from the spread of COVID-19. We develop a number of mathematical formalisms for tackling the problem and allow for a number of specific cases in which they apply. We further model computationally our developments under ideal conditions, and then show that they are consistent with experiment. And lastly, we answer the question posed in the title.
+\end{abstract}
+
+\keywords{Mechanics, Damping Effects, Experiment}
+
+
+\maketitle
+
+\input{sections/section01.tex}  %I believe leaving the sections in separate files is more organized, change it if you desire 
+\begin{figure}[htp]
+\centering
+\includegraphics[width=\linewidth]{figures/Figure 1 - Schematic.png}
+\caption{Simple schematic of considered problem. This event occurs immediately prior to the initializer passing through the door (thus t<0).}
+\end{figure}
+\input{sections/section02.tex}
+\input{sections/section03.tex}
+\input{sections/section04.tex}
+\input{sections/section05.tex}
+\input{sections/acknowledgements.tex}
+
+\begin{thebibliography}{4}
+\bibitem{NON}
+NASA,
+\textit{Anthropometric source book. Volume 1: Anthropometry for designers}
+(NASA tech docs, 1978).
+
+\bibitem{Marion Thornton}
+Marion-Thornton,
+\textit{Classical Dynamics}
+(Saunders College Pub, Fort Worth, 1995).
+
+\bibitem{Taylor}
+John R. Taylor,
+\textit{Classical Mechanics}
+(University Science Books, Sausalito, Calif. 2005).
+
+%\bibitem{Jackson-CE}
+%J. D. Jackson,
+%\textit{Classical Electrodynamics}
+%(John Wiley \& Sons, Danvers, 1999).
+\end{thebibliography}
+
+%\appendix*
+%\input{sections/appendix1.tex}
+
+\end{document}
